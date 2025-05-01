@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chris Miller</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="hamburger-menu">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <div class="left-content">
+      <h1 id="myName">Chris Miller</h1>
+      <h2 id="myTitle">Software Developer</h2>
+      <img src="images\Me.jpg" alt="My Picture" class="profile-pic" />
+      <div class="social-links">
+        <a href="https://github.com/cmillerl" target="_blank">
+          <img src="images\github-mark-white.png" alt="GitHub Logo" class="logo" />
+        </a>
+        <a href="https://www.linkedin.com/in/christopher-m-375790297/" target="_blank">
+          <img src="images\InBug-White.png" alt="LinkedIn Logo" class="logo" />
+        </a>
+      </div>
+    </div>
+    <div class="right-content">
+      <h1 id="about" class="right-headers">About Me</h1>
+      <p>Hi! I’m Chris, a Computer Science student graduating in October 2025, passionate about creating meaningful
+        software and exploring the intersection of technology and real-world impact. I’m currently sharpening my skills
+        in JavaScript and diving into the exciting world of AI and machine learning with powerful libraries like
+        Scikit-learn.
+        <br>
+        <br>
+        I love building projects that challenge me to grow, whether crafting dynamic web applications, analyzing
+        real-world data sets, or exploring the potential of machine learning models. I’m also committed to becoming a
+        well-rounded developer by tackling algorithm challenges on LeetCode and continuously expanding my toolkit.
+        <br>
+        <br>
+        I’m looking for a software development internship or entry-level role where I can contribute, collaborate, and
+        keep learning. If you’re building something exciting, I’d love to be part of it.
+      </p>
+    </div>
+  </main>
+  <hr class="divider">
+  <section class="bottom-content">
+    <div class="bottom-content-left">
+    </div>
+    <div class="bottom-content-right">
+      <h1 id="education" class="bottom-headers">Education</h1>
+      <h2 class="bottom-titles">Western Governors University — B.S. Computer Science</h2>
+      <p class="education-description">
+        February 2024 — October 2025
+      </p>
+      <h2 class="bottom-titles">Lane Community College</h2>
+      <p class="education-description">
+        September 2016 — June 2019
+      </p>
+      <h1 id="certifications" class="bottom-headers">Certifications</h2>
+        <h2 class="bottom-titles">ITIL 4 Foundations</h2>
+        <h2 class="bottom-titles">LPI Linux Essentials</h2>
+        <h1 id="projects" class="bottom-headers">Projects</h1>
+        <h2 class="bottom-titles">Automated Package Routing System</h2>
+        <ul class="project-description">
+          <li>
+            Developed a delivery optimization system simulating real-world logistics constraints using Python and
+            custom-built data structures.
+          </li>
+          <li>
+            Implemented a custom hash table from scratch to efficiently store and retrieve package data, enabling O(1)
+            lookups and real-time status updates.
+          </li>
+          <li>Designed and applied a greedy algorithm to optimize multi-truck routing and delivery schedules under
+            strict
+            distance and deadline constraints.
+          </li>
+          <li>Leveraged non-linear data structures, including hash tables and adjacency matrices, to model location data
+            and ensure fast route calculations.
+          </li>
+          <li>Built a time-aware simulation featuring dynamic logic (e.g., address correction for package #9) and
+            real-time truck progress tracking.</li>
+        </ul>
+
+        <h2 class="bottom-titles">Vacation Booking API</h2>
+        <ul class="project-description">
+          <li>
+            Modernized a legacy 1990s backend by developing a Spring Boot REST API integrated with a MySQL database.
+          </li>
+          <li>
+            Modeled entity relationships and created JPA repositories to manage customer, vacation, and excursion data.
+          </li>
+          <li>
+            Built RESTful controllers with input validation and structured response objects to support order placement.
+          </li>
+          <li>
+            Applied object-oriented principles using a clean layered architecture (Controller, Service, DAO, Entity).
+          </li>
+          <li>
+            Integrated with a pre-built Angular front end and verified full-stack data flow via MySQL Workbench.
+          </li>
+        </ul>
+        <h2 class="bottom-titles">Student Roster Manager</h2>
+        <ul class="project-description">
+          <li>
+            Designed and implemented an object-oriented C++ application to manage student records for a university
+            system migration.
+          </li>
+          <li>
+            Utilized C++ fundamentals including classes, arrays, pointers, enumerations, and dynamic memory management.
+          </li>
+          <li>
+            Applied modular design by separating class declarations and definitions across header and implementation
+            files.
+          </li>
+          <li>
+            Ensured memory safety by properly implementing destructors to deallocate dynamic memory.
+          </li>
+        </ul>
+        <h1 id="experience" class="bottom-headers">Professional Experience</h1>
+        <h2 class="bottom-titles">Mortgage Loan Originator</h2>
+        <p class="education-description">
+          October 2021 — Present
+        </p>
+        <h2 class="bottom-titles">Marketing Specialist</h2>
+        <p class="education-description">
+          October 2019 — October 2021
+        </p>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <p>&copy; 2025 — Chris Miller — All Rights Reserved</p>
+    </nav>
+  </footer>
+  <script src="js-files/scroll-on-click.js"></script>
+  <script src="js-files/hamburger-menu.js"></script>
+</body>
+
+</html>
