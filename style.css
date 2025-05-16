@@ -84,13 +84,15 @@ header nav {
   font-weight: bold;
   text-transform: capitalize;
   gap: 50px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
   color: white;
 }
 
 .nav-list li a:hover {
   color: #ffb703;
   opacity: 0.8;
+  transform: translateY(-3px);
+
 }
 
 /* Hamburger Menu */
@@ -309,7 +311,8 @@ header nav {
 /* Footer */
 footer p {
   font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
+  font-weight: 400;
+  font-size: 14px;
   background-color: #219ebc;
   color: white;
   text-align: center;
