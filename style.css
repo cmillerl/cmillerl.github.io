@@ -1,4 +1,9 @@
 /* Base Styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body::before {
   content: "";
   position: fixed;
