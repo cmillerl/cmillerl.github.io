@@ -10,7 +10,7 @@ body::before {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  opacity: 0.25;
+  opacity: 0.2;
   z-index: -1;
 }
 
@@ -53,6 +53,16 @@ header nav {
   justify-content: center;
   align-items: center;
   padding: 5px 0px 5px 0px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 60px;
+  margin: auto;
 }
 
 .nav-list,
