@@ -101,9 +101,12 @@ header nav {
   cursor: pointer;
   padding: 10px;
   position: absolute;
-  right: 20px;
-  top: 5px;
+  left: 5px;
+  align-items: center;
+  justify-content: center;
   z-index: 1001;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
 }
 
 .bar1,
@@ -323,10 +326,25 @@ footer p {
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .content {
     flex-direction: column;
     max-height: none;
+    align-items: center;
+  }
+
+  .bottom-content {
+    padding-right: 20px;
+  }
+
+  #myName {
+    margin-top: 50px;
+    font-size: 36px;
+  }
+
+  #myTitle {
+    margin-top: 10px;
+    font-size: 20px;
   }
 
   .left-content,
@@ -337,11 +355,18 @@ footer p {
 
   .right-content {
     padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right-headers {
+    font-size: 28px;
   }
 
   .profile-pic {
     width: 300px;
     height: 300px;
+    margin-top: 10px;
   }
 
   .nav-list {
@@ -356,27 +381,39 @@ footer p {
 
   .nav-list {
     position: fixed;
-    right: -100%;
+    left: -125%;
     top: 0;
     flex-direction: column;
     background-color: #219ebc;
-    width: 70%;
+    width: 100%;
     height: 100vh;
-    padding-top: 70px;
-    transition: 0.5s;
+    padding-top: 80px;
+    padding-left: 25px;
+    transition: 0.3s ease;
     box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2);
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
   }
 
   .nav-list.active {
-    right: 0;
+    left: 0;
   }
 
   .nav-list li {
-    margin: 15px 0;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .nav-list li a {
+    display: block;
+    padding: 5px 0;
+    font-size: 22px;
+    width: 100%;
   }
 
   .hamburger-menu.active .bar1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 7px);
   }
 
   .hamburger-menu.active .bar2 {
@@ -384,7 +421,7 @@ footer p {
   }
 
   .hamburger-menu.active .bar3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -7px);
   }
 
   header nav {
@@ -397,6 +434,7 @@ footer p {
   }
 
   #myName {
+    margin-top: 50px;
     font-size: 36px;
   }
 
@@ -428,12 +466,6 @@ footer p {
 }
 
 @media screen and (max-width: 480px) {
-  .nav-list {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    font-size: 14px;
-  }
 
   .profile-pic {
     width: 180px;
