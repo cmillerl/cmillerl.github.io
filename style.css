@@ -1,4 +1,15 @@
-/* Base Styles */
+:root {
+  --primary-color: #219ebc;
+  --secondary-color: #ffb703;
+  --background-color: #01273b;
+  --background-gradient-1: #023047;
+  --background-gradient-2: #034b6b;
+  --text-color: white;
+  --accent-color: #fb8500;
+  --light-blue: #8ecae6;
+  --light-gray: #e0e0e0;
+  --font-family: 'Roboto', sans-serif;
+}
 
 html {
   scroll-behavior: smooth;
@@ -20,9 +31,9 @@ body::before {
 }
 
 body {
-  background: linear-gradient(135deg, #01273b, #023047, #034b6b);
-  font-family: 'Open Sans', sans-serif;
-  color: white;
+  background: linear-gradient(135deg, var(--background-color), var(--background-gradient-1), var(--background-gradient-2));
+  font-family: var(--font-family);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
   display: flex;
@@ -41,10 +52,19 @@ a:hover {
   opacity: 0.5;
 }
 
-/* Header & Navigation */
+.not-visible {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+  transition: all 0.6s ease-in-out;
+}
+
 header {
-  background-color: #219ebc;
-  color: white;
+  background-color: var(--background-gradient-2);
+  color: var(--text-color);
   width: 100%;
   margin: 0;
   padding: 0;
@@ -85,17 +105,15 @@ header nav {
   text-transform: capitalize;
   gap: 50px;
   transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-  color: white;
+  color: var(--text-color);
 }
 
 .nav-list li a:hover {
-  color: #ffb703;
+  color: var(--secondary-color);
   opacity: 0.8;
   transform: translateY(-3px);
-
 }
 
-/* Hamburger Menu */
 .hamburger-menu {
   display: none;
   cursor: pointer;
@@ -114,12 +132,11 @@ header nav {
 .bar3 {
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: var(--text-color);
   margin: 6px 0;
   transition: 0.4s;
 }
 
-/* Main Content Layout */
 .content {
   display: flex;
   flex-direction: row;
@@ -157,11 +174,10 @@ header nav {
 .right-content p {
   padding: 20px;
   border-radius: 5px;
-  border-left: 3px solid #fb8500;
+  border-left: 3px solid var(--accent-color);
   background-color: rgba(33, 158, 188, 0.05);
 }
 
-/* Bottom Content */
 .bottom-content {
   width: 100%;
   display: flex;
@@ -193,21 +209,20 @@ header nav {
 .divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, transparent, #219ebc, #ffb703, transparent);
+  background: linear-gradient(to right, transparent, var(--primary-color), var(--secondary-color), transparent);
   margin: 20px 0px 20px 0px;
 }
 
-/* Typography */
-#myName {
+.my-name {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 0px;
   font-size: 50px;
-  color: white;
+  color: var(--text-color);
   letter-spacing: 1px;
 }
 
-#myTitle {
+.my-title {
   text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
@@ -219,7 +234,7 @@ header nav {
   font-weight: bold;
   margin: 20px 0px 0px 0px;
   text-align: left;
-  color: #219ebc;
+  color: var(--accent-color);
 }
 
 .bottom-headers {
@@ -227,8 +242,8 @@ header nav {
   font-weight: bold;
   margin: 30px 0px 10px 0px;
   text-align: left;
-  color: #219ebc;
-  border-bottom: 2px solid #219ebc;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
   padding-bottom: 5px;
   display: inline-block;
 }
@@ -238,7 +253,7 @@ header nav {
   font-weight: 500;
   margin: 15px 0px 5px 0px;
   text-align: left;
-  color: #ffb703;
+  color: var(--secondary-color);
 }
 
 .education-description {
@@ -247,11 +262,10 @@ header nav {
   font-style: italic;
   margin: 5px 0px 15px 15px;
   text-align: left;
-  color: #8ecae6;
+  color: var(--light-blue);
   padding-left: 10px;
 }
 
-/* Project Lists */
 .project-description {
   list-style-type: none;
   padding-left: 0;
@@ -262,7 +276,7 @@ header nav {
   position: relative;
   padding: 8px 0px 8px 25px;
   margin-bottom: 5px;
-  color: #e0e0e0;
+  color: var(--light-gray);
   font-size: 16px;
   line-height: 1.5;
 }
@@ -271,18 +285,17 @@ header nav {
   content: "•";
   position: absolute;
   left: 0;
-  color: #fb8500;
+  color: var(--accent-color);
   font-size: 20px;
   top: 6px;
 }
 
-/* Media & Images */
 .profile-pic {
   width: 400px;
   height: 400px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #219ebc;
+  border: 3px solid var(--light-blue);
   margin: 0px auto;
   display: block;
 }
@@ -292,7 +305,6 @@ header nav {
   margin: 0px 10px 0px 0px;
 }
 
-/* Social Links */
 .social-links {
   display: flex;
   justify-content: center;
@@ -311,13 +323,12 @@ header nav {
   opacity: 1;
 }
 
-/* Footer */
 footer p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
-  background-color: #219ebc;
-  color: white;
+  background-color: var(--background-gradient-2);
+  color: var(--text-color);
   text-align: center;
   width: 100%;
   margin: 0;
@@ -325,7 +336,6 @@ footer p {
   position: bottom;
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 1200px) {
   .content {
     flex-direction: column;
@@ -337,12 +347,12 @@ footer p {
     padding-right: 20px;
   }
 
-  #myName {
+  .my-name {
     margin-top: 50px;
     font-size: 36px;
   }
 
-  #myTitle {
+  .my-title {
     margin-top: 10px;
     font-size: 20px;
   }
@@ -384,7 +394,7 @@ footer p {
     left: -125%;
     top: 0;
     flex-direction: column;
-    background-color: #219ebc;
+    background-color: var(--background-gradient-2);
     width: 100%;
     height: 100vh;
     padding-top: 80px;
@@ -433,12 +443,12 @@ footer p {
     height: 200px;
   }
 
-  #myName {
+  .my-name {
     margin-top: 50px;
     font-size: 36px;
   }
 
-  #myTitle {
+ .my-title {
     font-size: 20px;
   }
 
@@ -472,7 +482,7 @@ footer p {
     height: 180px;
   }
 
-  #myName {
+  .my-name {
     font-size: 30px;
   }
 
