@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 startTransitions();
             }, 300);
         } else {
-            elements.forEach(({selector, delay}) => {
+            elements.forEach(({ selector, delay }) => {
                 const element = document.querySelector(selector);
                 if (element && element.classList.contains('not-visible')) {
                     setTimeout(() => {
