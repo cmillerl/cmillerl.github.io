@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function observeElements() {
-        if (!elementOne || currentRetries >= maxRetries) {
+        if (!elementOne && currentRetries < maxRetries) {
             setTimeout(() => {
                 currentRetries++;
                 observeElements();

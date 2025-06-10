@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const maxRetries = 10;
 
     function startTransitions() {
-        if (elements.length === 0 || currentRetries >= maxRetries) {
+        if (elements.length === 0 && currentRetries < maxRetries) {
             setTimeout(() => {
                 currentRetries++;
                 startTransitions();
