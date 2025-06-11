@@ -1,11 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    const maxRetries = 10;
+    let currentRetries = 0;
+
     function initHamburgerMenu() {
+
         const hamburger = document.querySelector('.hamburger-menu');
         const navList = document.querySelector('.nav-list');
 
-        if (hamburger && navList) {
-            const navLinks = document.querySelectorAll('.nav-list a');
+        if ((!hamburger || !navList) && currentRetries < maxRetries) {
+            currentRetries++;
+            setTimeout(initHamburgerMenu, 300);
+        } else if (hamburger && navList) {
 
+            const navLinks = document.querySelectorAll('.nav-list a');
             hamburger.addEventListener('click', function () {
                 this.classList.toggle('active');
                 navList.classList.toggle('active');
@@ -24,8 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     navList.classList.remove('active');
                 }
             });
-        } else {
-            setTimeout(initHamburgerMenu, 100);
         }
     }
 

@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const elementOne = document.querySelector('.bottom-content-right');
     const maxRetries = 10;
     let currentRetries = 0;
 
@@ -17,12 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function observeElements() {
-        if (!elementOne || currentRetries >= maxRetries) {
+
+        const elementOne = document.querySelector('.bottom-content-right');
+
+        if (!elementOne && currentRetries < maxRetries) {
             setTimeout(() => {
                 currentRetries++;
                 observeElements();
             }, 300);
-        } else {
+        } else if (elementOne) {
             observer.observe(elementOne);
         }
     }
