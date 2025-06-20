@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
             { selector: '.my-name', delay: 300 },
             { selector: '.my-title', delay: 600 },
             { selector: '.profile-pic', delay: 900 },
-            { selector: '.social-links', delay: 1200 },
-            { selector: '.right-content', delay: 1500 }
+            { selector: '.button-projects', delay: 1200 },
+            { selector: '.social-links', delay: 1500 },
+            { selector: '.middle-content', delay: 1800 }
         ];
 
         const foundElements = elements.filter(({ selector }) => document.querySelector(selector));

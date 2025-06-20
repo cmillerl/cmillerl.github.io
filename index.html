@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chris Miller</title>
+  <meta name="description" content="Chris Miller — Software Engineer — Computer Science Senior at WGU" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/favicon.png" type="image/png" />
 </head>
@@ -12,99 +13,57 @@
 <body>
   <div id="header-placeholder"></div>
   <main class="content">
-    <div class="left-content">
+    <div class="top-content">
       <h1 class="my-name not-visible">Chris Miller</h1>
       <h2 class="my-title not-visible">Software Engineer</h2>
-      <img src="images\Me.jpg" alt="My Picture" class="profile-pic not-visible" />
-      <div class="social-links not-visible">
-        <a href="https://github.com/cmillerl" target="_blank">
-          <img src="images\github-mark-white.png" alt="GitHub Logo" class="logo" />
-        </a>
-        <a href="https://www.linkedin.com/in/christopher-m-375790297/" target="_blank">
-          <img src="images\InBug-White.png" alt="LinkedIn Logo" class="logo" />
+      <img src="images/my-picture.jpg" alt="My Picture" class="profile-pic not-visible" />
+      <div class="button-projects not-visible">
+        <a href="#projects">
+          <button class="button-href" type="button">Projects</button>
         </a>
       </div>
-    </div>
-    <div class="right-content not-visible">
-      <h1 id="about" class="right-headers">About Me</h1>
-      <p>Hi! I’m Chris, a Computer Science student graduating in October 2025 with a strong passion for building
-        meaningful software that solves real-world problems. I’m currently focused on sharpening my JavaScript skills
-        and diving deeper into web development with React.
-        <br>
-        <br>
-        I love working on projects that challenge me to grow, especially when it comes to creating responsive and
-        user-friendly interfaces. I'm committed to becoming a well-rounded developer by regularly solving algorithm
-        challenges on LeetCode, experimenting with new tools, and continuously building up my development skills.
-        <br>
-        <br>
-        I’m currently seeking a software development internship or entry-level role where I can contribute to exciting
-        projects, collaborate with other developers, and keep learning. If you're building something impactful, I’d love
-        to be a part of it.
-      </p>
-    </div>
+      <div class="social-links not-visible">
+        <a href="https://github.com/cmillerl" target="_blank">
+          <img src="images/github-logo.png" alt="GitHub Logo" class="logo" />
+        </a>
+        <a href="https://www.linkedin.com/in/christopher-m-375790297/" target="_blank">
+          <img src="images/linkedin-logo.png" alt="LinkedIn Logo" class="logo" />
+        </a>
+      </div>
+      <div class="middle-content not-visible">
+        <h1 id="about" class="middle-headers">About Me</h1>
+        <p>Hi! I’m Chris, a Computer Science student graduating in October 2025 with a strong passion for building
+          meaningful software that solves real-world problems. I’m currently focused on sharpening my JavaScript skills
+          and diving deeper into web development with React.</p>
+      </div>
   </main>
   <div class="divider"></div>
-  <section class="bottom-content">
-    <div class="bottom-content-left">
-    </div>
-    <div class="bottom-content-right not-visible">
+  <section class="bottom-content not-visible">
       <h1 id="projects" class="bottom-headers">Projects</h1>
       <a href="https://github.com/cmillerl/package-delivery-simulation" target="_blank" class="project-links">
         <h2 class="bottom-titles">Automated Package Routing System — Python, Data Structures & Algorithms ↗</h2>
       </a>
       <ul class="project-description">
         <li>
-          Developed a delivery optimization system simulating real-world logistics constraints using Python and
-          custom-built data structures.
+          Python-based delivery optimization system with custom data structures, including a hash table for O(1) package
+          lookups and a greedy algorithm for multi-truck routing under real-world constraints. Simulated real-time
+          delivery with dynamic logic and route tracking.
         </li>
-        <li>
-          Implemented a custom hash table from scratch to efficiently store and retrieve package data, enabling O(1)
-          lookups and real-time status updates.
-        </li>
-        <li>Designed and applied a greedy algorithm to optimize multi-truck routing and delivery schedules under
-          strict
-          distance and deadline constraints.
-        </li>
-        <li>Leveraged non-linear data structures, including hash tables and adjacency matrices, to model location data
-          and ensure fast route calculations.
-        </li>
-        <li>Built a time-aware simulation featuring dynamic logic (e.g., address correction for package #9) and
-          real-time truck progress tracking.</li>
       </ul>
 
       <h2 class="bottom-titles">Vacation Booking REST API — Java Spring Boot, MySQL</h2>
       <ul class="project-description">
         <li>
-          Modernized a legacy 1990s backend by developing a Spring Boot REST API integrated with a MySQL database.
-        </li>
-        <li>
-          Modeled entity relationships and created JPA repositories to manage customer, vacation, and excursion data.
-        </li>
-        <li>
-          Built RESTful controllers with input validation and structured response objects to support order placement.
-        </li>
-        <li>
-          Applied object-oriented principles using a clean layered architecture (Controller, Service, DAO, Entity).
-        </li>
-        <li>
-          Integrated with a pre-built Angular front end and verified full-stack data flow via MySQL Workbench.
+          Modernized a legacy backend by developing a Spring Boot REST API with MySQL. Designed JPA entities and
+          repositories, implemented layered architecture, and integrated with an Angular frontend to support full-stack
+          order placement and data management.
         </li>
       </ul>
       <h2 class="bottom-titles">Student Records Manager — C++, Dynamic Memory Management</h2>
       <ul class="project-description">
         <li>
-          Designed and implemented an object-oriented C++ application to manage student records for a university
-          system migration.
-        </li>
-        <li>
-          Utilized C++ fundamentals including classes, arrays, pointers, enumerations, and dynamic memory management.
-        </li>
-        <li>
-          Applied modular design by separating class declarations and definitions across header and implementation
-          files.
-        </li>
-        <li>
-          Ensured memory safety by properly implementing destructors to deallocate dynamic memory.
+          Object-oriented C++ application for university student record management using classes, pointers, enums, and
+          dynamic memory. Applied modular design and ensured memory safety with proper destructor implementation.
         </li>
       </ul>
       <h1 id="education" class="bottom-headers">Education</h1>
@@ -128,7 +87,6 @@
         <p class="education-description">
           October 2019 — October 2021
         </p>
-    </div>
   </section>
   <div id="footer-placeholder"></div>
   <script src="js-files/header-footer.js"></script>

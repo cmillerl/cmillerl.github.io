@@ -10,7 +10,7 @@
   --light-blue: #8ecae6;
   --light-gray: #e0e0e0;
   --font-family: 'Roboto', sans-serif;
-  --background: url('images/background.jpg');
+  --background: url('images/main-background.jpg');
 }
 
 /* BASE STYLES */
@@ -29,12 +29,12 @@ body::before {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  opacity: 0.2;
+  opacity: 0.1;
   z-index: -1;
 }
 
 body {
-  background: linear-gradient(135deg, var(--background-color), var(--background-gradient-1), var(--background-gradient-2));
+  background: var(--background-color);
   font-family: var(--font-family);
   color: var(--text-color);
   margin: 0;
@@ -150,69 +150,91 @@ header nav {
   flex-direction: row;
   width: 100%;
   flex-grow: 1;
-  max-height: 75vh;
+  height: auto;
   padding: 20px 0;
+  margin-top: 50px;
   position: relative;
 }
 
-.left-content {
-  width: 40%;
+.top-content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   align-items: center;
-  padding: 40px 0 0 0;
-  justify-content: flex-start;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
   position: relative;
 }
 
-.right-content {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding: 40px 100px 0px 0px;
-  justify-content: center;
-  max-width: 100ch;
-  text-align: left;
-  font-size: 17px;
-  line-height: 1.6;
-}
-
-.right-content p {
-  padding: 20px;
-  border-radius: 5px;
-  border-left: 3px solid var(--accent-color);
-  background-color: rgba(33, 158, 188, 0.05);
-}
-
-/* BOTTOM CONTENT LAYOUT */
-.bottom-content {
-  width: 100%;
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: row;
-  margin-top: 5px;
-  min-height: 25vh;
-}
-
-.bottom-content-left {
-  min-width: 10%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding: 0px 0px 0px 0px;
-  justify-content: center;
-}
-
-.bottom-content-right {
+.middle-content {
   width: 90%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
+  margin: 0;
   justify-content: center;
   max-width: 100ch;
+  text-align: justify;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.middle-content p {
+  padding: 20px;
+  border-radius: 5px;
+  border-left: 3px solid var(--light-blue);
+  background-color: var(--background-gradient-2);
+  color: var(--text-color);
+}
+
+/* BUTTON LAYOUT */
+
+.button-projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button-href {
+  color: var(--background-color);
+  font-size: 24px;
+  padding: 15px 30px;
+  border-radius: 6px;
+  border: none;
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-href:hover {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* BOTTOM CONTENT LAYOUT */
+.bottom-content {
+  width: 90%;
+  height: auto;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 0px 0px 0px 0px;
+  margin-left: 100px;
+  justify-content: center;
+  max-width: 125ch;
 }
 
 /* UTILITY ELEMENTS */
@@ -237,18 +259,18 @@ header nav {
 .my-title {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 25px;
   color: var(--text-color);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.right-headers {
+.middle-headers {
   font-size: 25px;
   font-weight: bold;
   margin: 20px 0px 0px 0px;
-  text-align: left;
-  color: var(--accent-color);
+  text-align: center;
+  color: var(--secondary-color);
 }
 
 .bottom-headers {
@@ -267,7 +289,7 @@ header nav {
   font-weight: 500;
   margin: 15px 0px 5px 0px;
   text-align: left;
-  color: var(--secondary-color);
+  color: var(--secondary-color)
 }
 
 .education-description {
@@ -276,7 +298,7 @@ header nav {
   font-style: italic;
   margin: 5px 0px 15px 15px;
   text-align: left;
-  color: var(--light-blue);
+  color: var(--light-gray);
   padding-left: 10px;
 }
 
@@ -285,12 +307,14 @@ header nav {
   list-style-type: none;
   padding-left: 0;
   margin-left: 15px;
+  margin-bottom: 0px !important;
+  margin-top: 10px !important;
+  text-align: justify;
 }
 
 .project-description li {
   position: relative;
   padding: 8px 0px 8px 25px;
-  margin-bottom: 5px;
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.5;
@@ -300,43 +324,40 @@ header nav {
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--accent-color);
+  color: var(--secondary-color);
   font-size: 20px;
   top: 6px;
 }
 
 /* IMAGES & MEDIA */
 .profile-pic {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  margin: 0px auto;
+  margin: 0px;
   display: block;
 }
 
 .logo {
-  height: 40px;
-  margin: 0px 10px 0px 0px;
+  height: 50px;
+  margin: 0px;
+  margin-bottom: 50px;
 }
 
 /* SOCIAL LINKS */
 .social-links {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 10px;
-  padding: 10px 20px;
-}
-
-.social-links a {
-  transform: scale(1);
-  transition: transform 0.3s ease;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 0;
 }
 
 .social-links a:hover {
-  transform: scale(1.2);
-  opacity: 1;
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
 }
 
 .project-links {
@@ -356,6 +377,7 @@ footer p {
   text-align: center;
   width: 100%;
   margin: 0;
+  margin-top: 20px;
   padding: 5px 0;
   position: bottom;
 }
@@ -370,6 +392,7 @@ footer p {
 
   .bottom-content {
     padding-right: 20px;
+    margin-left: 30px;
   }
 
   .my-name {
@@ -382,30 +405,22 @@ footer p {
     font-size: 20px;
   }
 
-  .left-content,
-  .right-content {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .right-content {
+  .middle-content {
     padding: 20px;
     align-items: center;
     justify-content: center;
   }
 
-  .right-headers {
+  .middle-headers {
     font-size: 28px;
-  }
-
-  .profile-pic {
-    width: 300px;
-    height: 300px;
-    margin-top: 10px;
   }
 
   .nav-list {
     gap: 30px;
+  }
+
+  .nav-list li a {
+    font-size: 16px;
   }
 }
 
@@ -425,11 +440,20 @@ footer p {
     height: 100vh;
     padding-top: 80px;
     padding-left: 25px;
-    transition: 0.3s ease;
+    transition: all 0.3s ease-in-out;
     box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2);
     align-items: flex-start;
     justify-content: flex-start;
     gap: 0;
+  }
+
+  .nav-list li a {
+    display: block;
+    width: 100%;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    margin-top: 20px 0;
+    font-size: 18px !important;
   }
 
   .nav-list.active {
@@ -437,15 +461,9 @@ footer p {
   }
 
   .nav-list li {
-    margin: 10px 0;
+    margin: 20px 0;
     width: 100%;
-  }
-
-  .nav-list li a {
-    display: block;
-    padding: 5px 0;
-    font-size: 22px;
-    width: 100%;
+    font-size: 18px !important;
   }
 
   .hamburger-menu.active .bar1 {
@@ -465,8 +483,8 @@ footer p {
   }
 
   .profile-pic {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
   }
 
   .my-name {
@@ -488,15 +506,11 @@ footer p {
 
   .bottom-content {
     flex-direction: column;
-  }
-
-  .bottom-content-left,
-  .bottom-content-right {
-    width: 100%;
     padding: 0 20px;
+    margin-left: 10px;
   }
 
-  .right-content p {
+  .middle-content p {
     padding: 15px;
   }
 }
@@ -505,15 +519,15 @@ footer p {
 @media screen and (max-width: 480px) {
 
   .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
   }
 
   .my-name {
     font-size: 30px;
   }
 
-  .right-headers,
+  .middle-headers,
   .bottom-headers {
     font-size: 24px;
   }
@@ -526,5 +540,14 @@ footer p {
   .education-description {
     padding-left: 5px;
     margin-left: 10px;
+  }
+
+  .button-href {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    height: 40px;
   }
 }

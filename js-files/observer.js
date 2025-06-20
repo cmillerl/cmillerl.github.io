@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function observeElements() {
 
-        const elementOne = document.querySelector('.bottom-content-right');
+        const elementOne = document.querySelector('.bottom-content');
 
         if (!elementOne && currentRetries < maxRetries) {
             setTimeout(() => {
