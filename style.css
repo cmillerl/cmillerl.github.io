@@ -306,7 +306,7 @@ header nav {
 .container-projects {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -315,6 +315,7 @@ header nav {
   width: 400px;
   height: 500px;
   background: var(--background-gradient-2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -322,6 +323,7 @@ header nav {
   padding: 20px;
   margin-top: 15px;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .bottom-content-div-picture-package,
@@ -384,7 +386,7 @@ header nav {
 
 .tech-logo,
 .tech-logo-clickable {
-  width: 50px;
+  width: 48px;
   height: auto;
   transition: all 0.3s ease-in-out;
 }
@@ -506,6 +508,20 @@ footer p {
 
   .nav-list li a {
     font-size: 16px;
+  }
+}
+
+/* PROJECT RESPONSIVE */
+@media screen and (max-width: 950px) {
+  .container-projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottom-content-div-projects {
+    width: 90%;
+    max-width: 600px;
+    height: auto;
   }
 }
 
@@ -634,5 +650,10 @@ footer p {
 
   .logo {
     height: 40px;
+  }
+
+  .tech-logo,
+  .tech-logo-clickable {
+    width: 36px;
   }
 }

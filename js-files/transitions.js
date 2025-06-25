@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
             { selector: '.profile-pic', delay: 900 },
             { selector: '.button-projects', delay: 1200 },
             { selector: '.social-links', delay: 1500 },
-            { selector: '.middle-content', delay: 1800 }
+            { selector: '.middle-content', delay: 1800 },
+            { selector: '.divider', delay: 2100 }
         ];
 
         const foundElements = elements.filter(({ selector }) => document.querySelector(selector));
