@@ -245,6 +245,11 @@ header nav {
 }
 
 /* TYPOGRAPHY */
+.highlighted-text {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
 .my-name {
   text-align: center;
   margin-top: 20px;
@@ -313,7 +318,8 @@ header nav {
 
 .bottom-content-div-projects {
   width: 400px;
-  height: 500px;
+  min-height: 500px;
+  max-height: auto;
   background: var(--background-gradient-2);
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
@@ -367,10 +373,12 @@ header nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: justify;
+  text-align: left;
   width: 100%;
   margin: 0 auto;
   font-size: 16px;
+  letter-spacing: 1.1;
+  line-height: 1.5;
 }
 
 .bottom-content-div-tech {
@@ -382,6 +390,7 @@ header nav {
   margin: 0 auto;
   gap: 15px;
   margin-top: auto;
+  flex-wrap: wrap;
 }
 
 .tech-logo,
